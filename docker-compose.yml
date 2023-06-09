@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  telegram:
+    build: .
+    container_name: fit_uploader_bot
+    command: "python /usr/src/app/bot.py"
+    env_file:
+      - .env
+    restart: always
